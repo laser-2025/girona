@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة الإدارة - إضافة منتجات جديدة</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="admin-container">
+    <h1>لوحة الإدارة</h1>
+    <p>أضيفي أعمالك الجديدة بسهولة</p>
+
+    <form id="addForm">
+        <div class="form-grid">
+            <input type="text" id="beforeImg" placeholder="رابط الصورة قبل (مثل: images/before3.jpg)" required>
+            <input type="text" id="afterImg" placeholder="رابط الصورة بعد (مثل: images/after3.jpg)" required>
+            <input type="text" id="video" placeholder="رابط الفيديو (اختياري مثل: videos/video3.mp4)">
+            
+            <input type="text" id="titleAr" placeholder="العنوان بالعربية" required>
+            <input type="text" id="titleEs" placeholder="العنوان بالإسبانية" required>
+            
+            <textarea id="descAr" placeholder="كيف تم التعديل بالعربية (مثال: تم تجميل البشرة + إزالة الحبوب...)" required></textarea>
+            <textarea id="descEs" placeholder="كيف تم التعديل بالإسبانية" required></textarea>
+            
+            <input type="text" id="priceAr" placeholder="السعر بالدرهم (مثال: 250 درهم)" required>
+            <input type="text" id="priceEs" placeholder="السعر باليورو (مثال: 25 €)" required>
+        </div>
+
+        <button type="submit" class="add-btn">
+            <i class="fas fa-plus"></i> أضيفي المنتج الجديد
+        </button>
+    </form>
+
+    <hr>
+
+    <h2>المنتجات المضافة حالياً (سيظهر تلقائياً في الموقع)</h2>
+    <div id="productsList"></div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
